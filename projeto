@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uniclin - Projeto Conceitual</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #eaf3fc;
+color: #000;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #004a99;
+color: white;
+text-align: center;
+padding: 20px 10px;
+}
+h1, h2, h3, h4 {
+color: #004a99;
+}
+section {
+padding: 15px 30px;
+background: white;
+margin: 15px auto;
+width: 90%;
+border-radius: 8px;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+th, td {
+border: 1px solid #ccc;
+padding: 8px;
+text-align: left;
+}
+th {
+background-color: #cfe3fc;
+color: #003366;
+}
+h3 {
+background-color: #e0edff;
+padding: 5px;
+border-left: 5px solid #004a99;
+}
+footer {
+background-color: #004a99;
+color: white;
+text-align: center;
+padding: 10px;
+font-size: 14px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Documento de Visão - Uniclin</h1>
+</header>
+
+
+<section>
+<h2> Áreas de Negócio</h2>
+<p><strong>Parte Envolvida:</strong> Administrativo<br>
+<strong>Finalidade:</strong> Planejamento<br>
+<strong>Atribuição:</strong> Estratégico, gestão de estrutura</p>
+
+
+<p><strong>Parte Envolvida:</strong> Gestão financeira<br>
+<strong>Finalidade:</strong> Contabilidade, Fluxo de caixa<br>
+<strong>Atribuição:</strong> Recebimentos e investimentos</p>
+
+
+<p><strong>Parte Envolvida:</strong> Atendimento ao paciente<br>
+<strong>Finalidade:</strong> Suporte, fidelização<br>
+<strong>Atribuição:</strong> Solução de problemas, garantia da satisfação do cliente</p>
+</section>
+
+
+<section>
+<h2> Atores Externos</h2>
+<p><strong>Ator:</strong> Recepcionista<br>
+<strong>Finalidade:</strong> Agendamento, Atendimento ao cliente e cadastro de registros<br>
+<strong>Atribuição:</strong> Gerenciamento de prontuários</p>
+
+
+<p><strong>Ator:</strong> Dentista<br>
+<section>
+</section>
+
+
+<section>
+<h2> Modelo Funcional</h2>
+<h3> Diagrama de Caso de Uso</h3>
+<p>(Incluir o diagrama elaborado com utilização do Visio)</p>
+
+
+<h3> Descrição do Caso de Uso</h3>
+<pre>
+Caso de uso Nr: UC001
+Nome Caso de uso: Agendamento de Consulta
+Atores: Recepcionista, Paciente
+Descrição: Permite ao paciente marcar consultas de forma rápida e organizada.
+Início: Quando o paciente solicita um agendamento.
+Pré-condição: O paciente deve estar cadastrado.
+Pós-condição: A consulta é registrada no sistema.
+Fluxo normal usuário: O paciente escolhe a data e horário desejado.
+Fluxo normal sistema: O sistema verifica disponibilidade e confirma o agendamento.
+Exceções: Conflito de horários, dados inválidos.
+Alternativo: O paciente é notificado para escolher outro horário.
+</pre>
+</section>
+
+
+<section>
+<h2> Requisitos do Projeto</h2>
+
+
+<h3> Requisitos Funcionais</h3>
+<table>
+<tr><th>Número</th><th>Descrição</th><th>Prioridade</th><th>Revisado</th></tr>
+<tr><td>RF001</td><td>Permitir o agendamento de consultas online</td><td>Alta</td><td>Sim</td></tr>
+<tr><td>RF002</td><td>Gerenciar prontuários eletrônicos</td><td>Alta</td><td>Sim</td></tr>
+</table>
+
+
+<h3> Regras de Negócio</h3>
+<ul>
+<li>RN001 - Somente usuários cadastrados podem realizar agendamentos.</li>
+<li>RN002 - O sistema deve garantir sigilo das informações dos pacientes.</li>
+<li>RN003 - Os dados devem ser armazenados de forma segura e auditável.</li>
+</ul>
+
+
+<h3>Requisitos Não Funcionais</h3>
+<h4>Requisitos de Qualidade</h4>
+<p>Conformidade: Relatórios padronizados e armazenamento seguro.<br>
+Segurança de acesso: Proteger dados de pacientes.<br>
+Disponibilidade: Sistema acessível 24h por dia.</p>
+
+
+<h4>Requisitos de Confiabilidade</h4>
+<p>Recuperabilidade: Backups diários e restauração de dados.<br>
+Segurança: Minimizar riscos tecnológicos e operacionais.</p>
+
+
+<h4>Requisitos de Usabilidade</h4>
+<p>Inteligibilidade: Glossário e ajuda online.<br>
+Apreensibilidade: Interface intuitiva e simples.<br>
+Operacionalidade: Consultas e verificações automáticas.</p>
+
+
+<h4>Requisitos de Implementação</h4>
+<p>Plataforma: Web distribuída.<br>
+Tecnologia: Webservices e Wireless.<br>
+Implantação: Etapas de parametrização, cadastramento e simulação.</p>
+</section>
+
+
+<footer>
+---Projeto___Uniclin---
+</footer>
+</body>
+</html>
