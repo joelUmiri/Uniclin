@@ -342,69 +342,43 @@
             padding: 8px 20px;
         }
         
-        /* Team Section */
-        .team {
-            background: var(--light);
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .team-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .team-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .team-image {
-            height: 280px;
-            overflow: hidden;
-        }
-        
-        .team-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .team-card:hover .team-image img {
-            transform: scale(1.1);
-        }
-        
-        .team-info {
-            padding: 25px;
-            text-align: center;
-        }
-        
-        .team-info h3 {
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        .team-info .title {
-            color: var(--accent);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-        
-        .team-info p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        
+        /* Benefits Section */
+.benefits {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+}
+
+.benefits .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefits-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.benefits-table th, .benefits-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.benefits-table th {
+    background-color: #007acc;
+    color: #fff;
+    font-weight: 600;
+}
+
+.benefits-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
         .social-links {
             display: flex;
             justify-content: center;
