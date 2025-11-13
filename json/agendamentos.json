@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "data": "2025-11-15",
+    "hora": "10:30",
+    "paciente": "João Pedro",
+    "dentista": "Dra. Silvia Serrano",
+    "procedimento": "Implante",
+    "status": "confirmado"
+  },
+  {
+    "id": 2,
+    "data": "2025-11-15",
+    "hora": "14:00",
+    "paciente": "Ana Silva",
+    "dentista": "Dra. Silvia Serrano",
+    "procedimento": "Clareamento",
+    "status": "pendente"
+  }
+]

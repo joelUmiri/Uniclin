@@ -1,0 +1,76 @@
+<div class="action-bar">
+    <button class="btn-primary" onclick="openModal()">
+        <i class="fas fa-plus"></i> Novo Agendamento
+    </button>
+</div>
+
+<div class="agenda-card">
+    <h2>Lista de Agendamentos</h2>
+    <div class="table-container">
+        <table id="tabela-agendamentos">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Paciente</th>
+                    <th>Dentista</th>
+                    <th>Procedimento</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Preenchido via JS -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Novo Agendamento</h3>
+            <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+        <form id="agendamento-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Data</label>
+                    <input type="date" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label>Hora</label>
+                    <input type="time" name="hora" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Paciente</label>
+                <input type="text" name="paciente" placeholder="Nome completo" required>
+            </div>
+            <div class="form-group">
+                <label>Dentista</label>
+                <select name="dentista" required>
+                    <option value="Dra. Silvia Serrano">Dra. Silvia Serrano</option>
+                    <option value="Dr. Carlos Mendes">Dr. Carlos Mendes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Procedimento</label>
+                <input type="text" name="procedimento" placeholder="Ex: Implante" required>
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <select name="status">
+                    <option value="pendente">Pendente</option>
+                    <option value="confirmado">Confirmado</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" onclick="closeModal()">Cancelar</button>
+                <button type="button" class="btn-primary" onclick="salvarAgendamento()">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
