@@ -1,0 +1,14 @@
+[
+  {
+    "perfil": "recepcionista",
+    "usuario": "recep",
+    "senha": "1234",
+    "nome": "Maria"
+  },
+  {
+    "perfil": "dentista",
+    "usuario": "dentista",
+    "senha": "1234",
+    "nome": "Dra. Silvia Serrano"
+  }
+]

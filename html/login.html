@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Clínica UNICLIN</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+    <div class="login-container">
+        <!-- Logo -->
+        <div class="logo-login">
+            <i class="fas fa-tooth"></i>
+            Clínica <span>UNICLIN</span>
+        </div>
+
+        <h2>Área Restrita</h2>
+        <p>Selecione seu perfil e faça login</p>
+
+        <form id="loginForm" onsubmit="return loginUser(event)">
+            <div class="form-group">
+                <label for="perfil">Perfil de Acesso</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user-tag"></i>
+                    <select id="perfil" required>
+                        <option value="">Selecione...</option>
+                        <option value="recepcionista">Recepcionista</option>
+                        <option value="dentista">Dentista</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="Digite seu usuário" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login-submit">
+                <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
+
+            <div id="errorMessage" class="error-message">
+                Usuário, perfil ou senha incorretos.
+            </div>
+        </form>
+
+        <a href="../index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i> Voltar ao site
+        </a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="../js/auth.js"></script>
+<script src="../js/login.js"></script>
+
+</body>
+</html>

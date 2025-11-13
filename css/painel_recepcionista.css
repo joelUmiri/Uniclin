@@ -1,0 +1,293 @@
+:root {
+            --primary: #8B1A1A;
+            --secondary: #F5A9BC;
+            --hover-primary: #6B1414;
+            --gray-light: #D3D3D3;
+            --success: #27ae60;
+            --info: #3498db;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background: #fdf8f9; display: flex; min-height: 100vh; }
+
+        /* ===== SIDEBAR (IGUAL AO DENTISTA) ===== */
+        .sidebar {
+            width: 260px;
+            background: var(--primary);
+            color: white;
+            position: fixed;
+            top: 0; left: 0;
+            height: 100vh;
+            padding: 20px 0;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sidebar-header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .sidebar-header .logo i { color: var(--secondary); font-size: 2rem; }
+        .sidebar-header .logo span { color: var(--secondary); }
+
+        .sidebar-menu { flex: 1; padding: 20px 0; }
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 14px 25px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-menu a i { margin-right: 12px; width: 20px; text-align: center; font-size: 1.1rem; }
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background: rgba(245, 169, 188, 0.2);
+            color: white;
+            border-left: 4px solid var(--secondary);
+            padding-left: 21px;
+        }
+
+        .sidebar-footer {
+            padding: 0 25px 20px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+        }
+
+        /* ===== MAIN CONTENT - CORRIGIDO E POSICIONADO ===== */
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+            min-height: 100vh;
+            background: #fdf8f9;
+            transition: margin-left 0.3s ease;
+            width: calc(100% - 260px);
+        }
+
+        .header-bar {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header-bar h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-info i { color: var(--secondary); font-size: 1.3rem; }
+
+        .logout-btn {
+            background: var(--secondary);
+            color: var(--primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* ===== CARDS COM TENDÊNCIA ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border-left: 5px solid var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover { transform: translateY(-5px); }
+
+        .stat-card h3 {
+            color: var(--primary);
+            margin: 0 0 10px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .stat-card .value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .trend {
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .trend.up { color: var(--success); }
+        .trend.down { color: var(--danger); }
+
+        /* ===== TABELA DE AGENDAMENTOS ===== */
+        .agenda-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .agenda-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin: 0 0 20px;
+            font-size: 1.6rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .agenda-card h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.94rem;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.88rem;
+        }
+
+        td {
+            padding: 14px 12px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        tr:hover { background: #fdf2f5; }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status.confirmed { background: #d5f5e3; color: var(--success); }
+        .status.pending { background: #fef9e7; color: var(--warning); }
+
+        .action-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn.edit { color: var(--info); }
+        .action-btn.delete { color: var(--danger); }
+        .action-btn:hover { background: rgba(0,0,0,0.1); transform: scale(1.1); }
+
+        /* ===== MOBILE MENU TOGGLE ===== */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px; left: 20px;
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(139,26,26,0.3);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 992px) {
+            .sidebar { width: 80px; }
+            .sidebar-header .logo span,
+            .sidebar-menu a span,
+            .sidebar-footer { display: none; }
+            .sidebar-menu a { justify-content: center; padding: 14px 0; }
+            .main-content { margin-left: 80px; width: calc(100% - 80px); }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle { display: block; }
+            .sidebar { transform: translateX(-100%); width: 260px; }
+            .sidebar.active { transform: translateX(0); }
+            .main-content {
+                margin-left: 0 !important;
+                width: 100% !important;
+                padding: 80px 20px 20px;
+            }
+            .stats-grid { grid-template-columns: 1fr; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 10px 8px; }
+        }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Dentista - UNICLIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/painel_dentista.css">
+</head>
+<body data-perfil="dentista">
+
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-tooth"></i>
+                <span>UNICLIN</span>
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="#" class="active"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            <a href="#"><i class="fas fa-calendar-check"></i><span>Agenda</span></a>
+            <a href="#"><i class="fas fa-users"></i><span>Pacientes</span></a>
+            <a href="#"><i class="fas fa-clipboard-list"></i><span>Prontuários</span></a>
+            <a href="#"><i class="fas fa-cog"></i><span>Configurações</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© 2025 UNICLIN</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="header-bar">
+            <h1>Painel do Dentista</h1>
+            <div class="user-info">
+                <i class="fas fa-user"></i>
+                <span>Carregando...</span>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Consultas Hoje</h3>
+                <div class="value">18</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> +8% esta semana</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pacientes Atendidos</h3>
+                <div class="value">842</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> +12% este mês</div>
+            </div>
+            <div class="stat-card">
+                <h3>Faltas</h3>
+                <div class="value">1</div>
+                <div class="trend down"><i class="fas fa-arrow-down"></i> -50% vs ontem</div>
+            </div>
+            <div class="stat-card">
+                <h3>Procedimentos</h3>
+                <div class="value">42</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> +15 esta semana</div>
+            </div>
+        </div>
+
+        <div class="agenda-card">
+            <h2>Agenda do Dia</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Paciente</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:30</td>
+                        <td>Carlos Mendes</td>
+                        <td>Implante</td>
+                        <td><span class="status confirmado">Confirmado</span></td>
+                        <td>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09:15</td>
+                        <td>Luana Costa</td>
+                        <td>Clareamento</td>
+                        <td><span class="status pendente">Pendente</span></td>
+                        <td>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/painel_dentista.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

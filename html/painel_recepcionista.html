@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Recepcionista - Clínica UNICLIN</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/painel_recepcionista.css">
+</head>
+<body>
+
+    <!-- Botão Mobile -->
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <i class="fas fa-tooth"></i>
+                <span>UNICLIN</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="#" class="active">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-calendar-check"></i>
+                <span>Agendamentos</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-users"></i>
+                <span>Pacientes</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Prontuários</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-comments"></i>
+                <span>Comunicação</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                <span>Configurações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>© 2025 UNICLIN</p>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT - POSICIONADO E COMPLETO -->
+    <main class="main-content">
+        <div class="header-bar">
+            <h1>Painel da Recepcionista</h1>
+            <div class="user-info">
+                <i class="fas fa-user"></i>
+                <span>Carregando...</span>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </div>
+        </div>
+
+        <!-- Estatísticas com Tendência -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Consultas Hoje</h3>
+                <div class="value">24</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> +12% esta semana</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pacientes Ativos</h3>
+                <div class="value">1.248</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> +5% este mês</div>
+            </div>
+            <div class="stat-card">
+                <h3>Faltas Hoje</h3>
+                <div class="value">2</div>
+                <div class="trend down"><i class="fas fa-arrow-down"></i> -30% vs ontem</div>
+            </div>
+            <div class="stat-card">
+                <h3>Novos Pacientes</h3>
+                <div class="value">18</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> +8 esta semana</div>
+            </div>
+        </div>
+
+        <!-- Tabela de Agendamentos do Dia -->
+        <div class="agenda-card">
+            <h2>Agendamentos do Dia</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Paciente</th>
+                        <th>Serviço</th>
+                        <th>Dentista</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:30</td>
+                        <td>Ana Silva</td>
+                        <td>Consulta Inicial</td>
+                        <td>Dra. Silvia</td>
+                        <td><span class="status confirmed">Confirmado</span></td>
+                        <td>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09:00</td>
+                        <td>João Costa</td>
+                        <td>Clareamento</td>
+                        <td>Dra. Silvia</td>
+                        <td><span class="status pending">Pendente</span></td>
+                        <td>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10:15</td>
+                        <td>Maria Oliveira</td>
+                        <td>Implante</td>
+                        <td>Dr. Pedro</td>
+                        <td><span class="status confirmed">Confirmado</span></td>
+                        <td>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/painel_recepcionista.js"></script>
+</body>
+</html>
