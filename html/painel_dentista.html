@@ -16,17 +16,27 @@
 
     <aside class="sidebar">
         <div class="sidebar-header">
-            <a href="#" class="logo">
+            <a href="painel_dentista.html" class="logo">
                 <i class="fas fa-tooth"></i>
                 <span>UNICLIN</span>
             </a>
         </div>
         <nav class="sidebar-menu">
-            <a href="#" class="active"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-            <a href="#"><i class="fas fa-calendar-check"></i><span>Agenda</span></a>
-            <a href="#"><i class="fas fa-users"></i><span>Pacientes</span></a>
-            <a href="#"><i class="fas fa-clipboard-list"></i><span>Prontuários</span></a>
-            <a href="#"><i class="fas fa-cog"></i><span>Configurações</span></a>
+            <a href="painel_dentista.html" class="active">
+                <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-calendar-check"></i><span>Agenda</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-users"></i><span>Pacientes</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-clipboard-list"></i><span>Prontuários</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-cog"></i><span>Configurações</span>
+            </a>
         </nav>
         <div class="sidebar-footer">
             <p>© 2025 UNICLIN</p>
@@ -38,8 +48,8 @@
             <h1>Painel do Dentista</h1>
             <div class="user-info">
                 <i class="fas fa-user"></i>
-                <span>Carregando...</span>
-                <button class="logout-btn">
+                <span id="user-name">Carregando...</span>
+                <button class="logout-btn" onclick="logout()">
                     <i class="fas fa-sign-out-alt"></i> Sair
                 </button>
             </div>
@@ -106,12 +116,24 @@
         </div>
     </main>
 
+    <!-- Scripts originais -->
     <script src="../js/auth.js"></script>
     <script src="../js/painel_dentista.js"></script>
+
+    <!-- Script local: mantém Dashboard sempre ativo + toggle sidebar -->
     <script>
+        // Toggle do menu mobile
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('active');
         }
+
+        // Garante que Dashboard fique sempre ativo (única página do dentista)
+        document.addEventListener("DOMContentLoaded", function () {
+            const dashboardLink = document.querySelector('.sidebar-menu a[href="painel_dentista.html"]');
+            if (dashboardLink) {
+                dashboardLink.classList.add('active');
+            }
+        });
     </script>
 </body>
 </html>
